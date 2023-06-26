@@ -39,7 +39,8 @@ void setup() {
   Serial.print(F("Starting I2CDemo example program for BME680\n"));
   Serial.println("------------------------------------------------------");
   Serial.print(F("- Initializing BME680 sensor\n"));
-  while (!BME680.begin(I2C_STANDARD_MODE)) {  // Start BME680 using I2C, use first device found
+  while (!BME680.begin(I2C_STANDARD_MODE)) {
+    // Start BME680 using I2C, use first device found
     Serial.print(F("-  Unable to find BME680. Trying again in 5 seconds.\n"));
     delay(5000);
   }
@@ -74,7 +75,7 @@ void loop() {
     Serial.print(buf);
     sprintf(buf, "Pressure % 4.2f hPa ", (float)(pressure / 100.0));
     Serial.print(buf);
-    alt = altitude(pressure, 1006.8);
+    alt = altitude(pressure, 1008.1);
     sprintf(buf, "Altitude: % 3d m ", (int16_t)(alt));
     Serial.print(buf);
     sprintf(buf, "Gas: % 4d / % 02d\n", (int16_t)(gas / 100), (uint8_t)(gas % 100));
