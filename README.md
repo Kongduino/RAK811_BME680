@@ -7,4 +7,4 @@ This sketch, modified from the examples of the Zanshin BME680 library, shows how
 
 ## UPDATE
 
-Added a `launch.sh` script that uploads the firmware to the board – convenient when you want to upload it to several boards. The firmware is also included.
+Added a `launch.sh` script that uploads the firmware to the board – convenient when you want to upload it to several boards, or switch quickly between firmwares. The firmware is also included.
